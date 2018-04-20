@@ -2,13 +2,16 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-//document.getElementById('sizePicker').addEventListener('submit', makeGrid);
+document.getElementById('submitBtn').addEventListener('click', makeGrid);
 
 function makeGrid() {
-    const height = document.getElementById('inputHeight').value;
-    const width = document.getElementById('inputWidth').value;
-    const tableArea = document.getElementById('pixelCanvas');
+    let height = document.getElementById('inputHeight').value;
+    let width = document.getElementById('inputWidth').value;
+    let tableArea = document.getElementById('pixelCanvas');
 
+    //reset the table
+    tableArea.innerHTML = "";
+    
     //Make the grid
     for(let i = 0; i < height; i++){
       var row = document.createElement('tr');
@@ -23,6 +26,9 @@ function makeGrid() {
 
     });
 
+    console.log(height);
+    console.log(width);
+    console.log(tableArea);
     return false;
 
   };
