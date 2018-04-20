@@ -2,7 +2,6 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-document.getElementById('submitBtn').addEventListener('click', makeGrid);
 
 function makeGrid() {
     let height = document.getElementById('inputHeight').value;
@@ -25,10 +24,6 @@ function makeGrid() {
       evt.target.style.backgroundColor = document.getElementById('colorPicker').value;
 
     });
-
-    console.log(height);
-    console.log(width);
-    console.log(tableArea);
     return false;
 
   };
